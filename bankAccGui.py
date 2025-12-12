@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, bankAccount):
         bankAccount.setObjectName("bankAccount")
-        bankAccount.resize(392, 729)
+        bankAccount.setFixedSize(392, 729)
         bankAccount.setStyleSheet("background-color: rgb(250,250,255)")
         self.centralwidget = QtWidgets.QWidget(parent=bankAccount)
         self.centralwidget.setObjectName("centralwidget")
@@ -49,18 +49,28 @@ class Ui_MainWindow(object):
         self.passwordEntry.setClearButtonEnabled(False)
         self.passwordEntry.setObjectName("passwordEntry")
         self.passwordLabel = QtWidgets.QLabel(parent=self.loginPage)
-        self.passwordLabel.setGeometry(QtCore.QRect(40, 250, 321, 31))
+        self.passwordLabel.setGeometry(QtCore.QRect(40, 255, 321, 31))
         self.passwordLabel.setStyleSheet("color: rgb(14,11,128);\n"
 "font: 13pt \"Verdana\";\n"
 "border-bottom: 5px solid rgb(14,11,128);")
         self.passwordLabel.setObjectName("passwordLabel")
         self.passwordEntryLabel = QtWidgets.QLabel(parent=self.loginPage)
-        self.passwordEntryLabel.setGeometry(QtCore.QRect(40, 320, 321, 51))
+        self.passwordEntryLabel.setGeometry(QtCore.QRect(40, 635, 321, 51))
         self.passwordEntryLabel.setStyleSheet("color: rgb(14,11,128);\n"
 "font: 10pt \"Verdana\";\n"
 "")
         self.passwordEntryLabel.setWordWrap(True)
         self.passwordEntryLabel.setObjectName("passwordEntryLabel")
+        
+        self.signInMessage = QtWidgets.QLabel(parent=self.loginPage)
+        self.signInMessage.setGeometry(QtCore.QRect(40, 350, 321, 51))
+        self.signInMessage.setStyleSheet("color: rgb(208,52,44);\n"
+"font: 10pt \"Verdana\";\n"
+"")
+        self.signInMessage.setWordWrap(True)
+        self.signInMessage.setObjectName("signInMessage")
+        
+        
         self.submitButton = QtWidgets.QPushButton(parent=self.loginPage)
         self.submitButton.setGeometry(QtCore.QRect(40, 690, 311, 31))
         self.submitButton.setStyleSheet("background-color: rgb(14, 11, 128);\n"
@@ -71,7 +81,7 @@ class Ui_MainWindow(object):
         self.submitButton.setObjectName("submitButton")
         
         self.loginButton = QtWidgets.QPushButton(parent=self.loginPage)
-        self.loginButton.setGeometry(QtCore.QRect(40, 370, 311, 31))
+        self.loginButton.setGeometry(QtCore.QRect(40, 330, 311, 31))
         self.loginButton.setStyleSheet("background-color: rgb(14, 11, 128);\n"
 "border: 2px solid rgb(240, 197,113);\n"
 "color: rgb(250, 250, 250);\n"
@@ -81,24 +91,24 @@ class Ui_MainWindow(object):
         
         
         self.passwordSUentry = QtWidgets.QLineEdit(parent=self.loginPage)
-        self.passwordSUentry.setGeometry(QtCore.QRect(40, 650, 321, 31))
+        self.passwordSUentry.setGeometry(QtCore.QRect(40, 610, 321, 31))
         self.passwordSUentry.setStyleSheet("border: 2px solid rgb(240,197,113);\n"
-"")
+"color: rgb(14, 11, 128)")
         self.passwordSUentry.setClearButtonEnabled(False)
         self.passwordSUentry.setObjectName("passwordSUlabel_2")
         self.usernameSUlabel = QtWidgets.QLabel(parent=self.loginPage)
-        self.usernameSUlabel.setGeometry(QtCore.QRect(40, 530, 321, 31))
+        self.usernameSUlabel.setGeometry(QtCore.QRect(40, 490, 321, 31))
         self.usernameSUlabel.setStyleSheet("color: rgb(14,11,128);\n"
 "font: 13pt \"Verdana\";\n"
 "border-bottom: 5px solid rgb(14,11,128);")
         self.usernameSUlabel.setObjectName("usernameSUlabel")
         self.usernameSUentry = QtWidgets.QLineEdit(parent=self.loginPage)
-        self.usernameSUentry.setGeometry(QtCore.QRect(40, 570, 321, 31))
+        self.usernameSUentry.setGeometry(QtCore.QRect(40, 530, 321, 31))
         self.usernameSUentry.setStyleSheet("border: 2px solid rgb(240,197,113);\n"
-"")
+"color: rgb(14, 11, 128)")
         self.usernameSUentry.setObjectName("usernameSUentry")
         self.passwordSUlabel = QtWidgets.QLabel(parent=self.loginPage)
-        self.passwordSUlabel.setGeometry(QtCore.QRect(40, 610, 321, 31))
+        self.passwordSUlabel.setGeometry(QtCore.QRect(40, 570, 321, 31))
         self.passwordSUlabel.setStyleSheet("color: rgb(14,11,128);\n"
 "font: 13pt \"Verdana\";\n"
 "border-bottom: 5px solid rgb(14,11,128);")
@@ -110,7 +120,7 @@ class Ui_MainWindow(object):
 "border-bottom: 5px solid rgb(14,11,128);")
         self.loginLabel.setObjectName("loginLabel")
         self.signUpLabel = QtWidgets.QLabel(parent=self.loginPage)
-        self.signUpLabel.setGeometry(QtCore.QRect(40, 480, 331, 41))
+        self.signUpLabel.setGeometry(QtCore.QRect(40, 440, 331, 41))
         self.signUpLabel.setStyleSheet("color: rgb(14,11,128);\n"
 "font: 20pt \"Verdana\";\n"
 "border-bottom: 5px solid rgb(14,11,128);")
@@ -132,7 +142,7 @@ class Ui_MainWindow(object):
 "border-radius: 8px;")
         self.savingsNameBalanceLabel.setObjectName("savingsNameBalanceLabel")
         self.depositAmt = QtWidgets.QLineEdit(parent=self.homePage)
-        self.depositAmt.setGeometry(QtCore.QRect(220, 326, 113, 31))
+        self.depositAmt.setGeometry(QtCore.QRect(215, 326, 70, 31))
         self.depositAmt.setStyleSheet("color: rgb(14, 11, 128);\n"
 "font: 13pt Verdana;\n"
 "border: 2px solid rgb(14, 11, 128);\n"
@@ -146,7 +156,7 @@ class Ui_MainWindow(object):
 "border-bottom: 5px solid rgb(14,11,128);")
         self.checkingLabel.setObjectName("checkingLabel")
         self.withdrawAmt = QtWidgets.QLineEdit(parent=self.homePage)
-        self.withdrawAmt.setGeometry(QtCore.QRect(220, 366, 113, 31))
+        self.withdrawAmt.setGeometry(QtCore.QRect(215, 366, 70, 31))
         self.withdrawAmt.setStyleSheet("color: rgb(14, 11, 128);\n"
 "font: 13pt Verdana;\n"
 "border: 2px solid rgb(14, 11, 128);\n"
@@ -154,7 +164,7 @@ class Ui_MainWindow(object):
         self.withdrawAmt.setText("")
         self.withdrawAmt.setObjectName("withdrawAmt")
         self.transferAmt = QtWidgets.QLineEdit(parent=self.homePage)
-        self.transferAmt.setGeometry(QtCore.QRect(220, 410, 113, 31))
+        self.transferAmt.setGeometry(QtCore.QRect(215, 410, 70, 31))
         self.transferAmt.setStyleSheet("color: rgb(14, 11, 128);\n"
 "font: 13pt Verdana;\n"
 "border: 2px solid rgb(14, 11, 128);\n"
@@ -170,6 +180,23 @@ class Ui_MainWindow(object):
 "font: 13pt \"Verdana\";\n"
 "border-bottom: 5px solid rgb(14,11,128);")
         self.savingsLabel.setObjectName("savingsLabel")
+        
+        self.errorLabel = QtWidgets.QLabel(parent=self.homePage)
+        self.errorLabel.setGeometry(QtCore.QRect(40, 292, 321, 31))
+        self.errorLabel.setStyleSheet("color: rgb(208,52,44);\n"
+"font: 9pt \"Verdana\";\n")
+        self.errorLabel.setObjectName("errorLabel")
+        
+        self.signOutButton = QtWidgets.QPushButton(parent=self.homePage)
+        self.signOutButton.setGeometry(QtCore.QRect(3, 700, 60, 25))
+        self.signOutButton.setStyleSheet("background-color: rgb(208,52,44);\n"
+"border: 2px solid rgb(211,211,211);\n"
+"color: rgb(211,211,211);\n"
+"font: 8pt Verdana;\n"
+"border-radius: 5px;")
+        self.signOutButton.setObjectName("signOutButton")
+        
+        
         self.nameBalanceLabel = QtWidgets.QLabel(parent=self.homePage)
         self.nameBalanceLabel.setGeometry(QtCore.QRect(40, 170, 321, 31))
         self.nameBalanceLabel.setStyleSheet("color: rgb(14,11,128);\n"
@@ -185,7 +212,40 @@ class Ui_MainWindow(object):
 "color: rgb(250, 250, 250);\n"
 "font: 13pt Verdana;\n"
 "border-radius: 8px;")
-        self.withdrawButton.setObjectName("withdrawButton")
+        
+        self.depositCombo = QtWidgets.QComboBox(parent=self.homePage)
+        self.depositCombo.setGeometry(QtCore.QRect(290, 326, 90, 32))
+        self.depositCombo.setObjectName("depositCombo")
+        self.depositCombo.addItem("To: Checking")
+        self.depositCombo.addItem("To: Savings")
+        self.depositCombo.setStyleSheet("border: 2px solid rgb(14, 11, 128);\n"
+"color: rgb(14, 11, 128);\n"
+"font: 9pt Verdana;\n"
+"QComboBox QAbstractItemView { min-width: 150px; }")
+        self.depositCombo.view().setMinimumWidth(110)
+        
+        self.withdrawCombo = QtWidgets.QComboBox(parent=self.homePage)
+        self.withdrawCombo.setGeometry(QtCore.QRect(290, 366, 90, 32))
+        self.withdrawCombo.setObjectName("withdrawCombo")
+        self.withdrawCombo.addItem("From: Checking")
+        self.withdrawCombo.addItem("From: Savings")
+        self.withdrawCombo.view().setMinimumWidth(110)
+        self.withdrawCombo.setStyleSheet("border: 2px solid rgb(14, 11, 128);\n"
+"color: rgb(14, 11, 128);\n"
+"font: 9pt Verdana;\n"
+"QComboBox QAbstractItemView { min-width: 150px; }")
+        
+        self.transferCombo = QtWidgets.QComboBox(parent=self.homePage)
+        self.transferCombo.setGeometry(QtCore.QRect(290, 406, 90, 32))
+        self.transferCombo.setObjectName("transferCombo")
+        self.transferCombo.addItem("From: Checking")
+        self.transferCombo.addItem("From: Savings")
+        self.transferCombo.view().setMinimumWidth(110)
+        self.transferCombo.setStyleSheet("border: 2px solid rgb(14, 11, 128);\n"
+"color: rgb(14, 11, 128);\n"
+"font: 9pt Verdana;\n"
+"QComboBox QAbstractItemView { min-width: 150px; }")
+        
         self.depositButton = QtWidgets.QPushButton(parent=self.homePage)
         self.depositButton.setGeometry(QtCore.QRect(30, 326, 113, 32))
         self.depositButton.setStyleSheet("background-color: rgb(14, 11, 128);\n"
@@ -207,9 +267,6 @@ class Ui_MainWindow(object):
 "border-bottom: 5px solid rgb(14,11,128);\n"
 "border-top: 5px solid rgb(14,11,128);")
         self.interestLabel.setObjectName("interestLabel")
-        self.balanceChart = QtWidgets.QGraphicsView(parent=self.homePage)
-        self.balanceChart.setGeometry(QtCore.QRect(70, 510, 256, 192))
-        self.balanceChart.setObjectName("balanceChart")
         self.amountLabel2 = QtWidgets.QLabel(parent=self.homePage)
         self.amountLabel2.setGeometry(QtCore.QRect(150, 372, 60, 20))
         self.amountLabel2.setStyleSheet("color: rgb(14, 11, 128);\n"
@@ -238,6 +295,11 @@ class Ui_MainWindow(object):
 "background-color: rgb(14, 11, 128);\n"
 "border-radius: 8px")
         self.balanceLabel.setObjectName("balanceLabel")
+        
+        self.chartWidget = QtWidgets.QWidget(parent=self.homePage)
+        self.chartWidget.setGeometry(QtCore.QRect(40, 500, 321, 200))
+        self.chartWidget.setObjectName("chartWidget")
+        
         self.stackedWidget.addWidget(self.homePage)
         bankAccount.setCentralWidget(self.centralwidget)
 
@@ -247,7 +309,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, bankAccount):
         _translate = QtCore.QCoreApplication.translate
-        bankAccount.setWindowTitle(_translate("bankAccount", "MainWindow"))
+        bankAccount.setWindowTitle(_translate("bankAccount", "Computer Science Bank"))
         self.welcomeLabel.setText(_translate("bankAccount", "Welcome to                    Computer Science Bank"))
         self.usernameEntry.setPlaceholderText(_translate("bankAccount", "Enter username"))
         self.usernameLabel_2.setText(_translate("bankAccount", "Username"))
@@ -256,6 +318,7 @@ class Ui_MainWindow(object):
         self.passwordEntryLabel.setText(_translate("bankAccount", "Password must be 7 characters long and contain at least one number and one symbol"))
         self.submitButton.setText(_translate("bankAccount", "Submit"))
         self.loginButton.setText(_translate("bankAccount", "Login"))
+        self.signOutButton.setText(_translate("bankAccount", "Sign Out"))
         self.passwordSUentry.setPlaceholderText(_translate("bankAccount", "Enter password"))
         self.usernameSUlabel.setText(_translate("bankAccount", "Username"))
         self.usernameSUentry.setPlaceholderText(_translate("bankAccount", "Enter username"))
@@ -263,16 +326,21 @@ class Ui_MainWindow(object):
         self.loginLabel.setText(_translate("bankAccount", "LOGIN"))
         self.signUpLabel.setText(_translate("bankAccount", "SIGN UP"))
         self.amountLabel3.setText(_translate("bankAccount", "Amount: "))
-        self.savingsNameBalanceLabel.setText(_translate("bankAccount", "Name - Balance"))
+        self.savingsNameBalanceLabel.setText(_translate("bankAccount", "Name -- Balance"))
         self.checkingLabel.setText(_translate("bankAccount", "Checking "))
         self.label_25.setText(_translate("bankAccount", "Balance over time chart"))
         self.savingsLabel.setText(_translate("bankAccount", "Savings "))
-        self.nameBalanceLabel.setText(_translate("bankAccount", "Name - Balance"))
+        self.nameBalanceLabel.setText(_translate("bankAccount", "Name -- Balance"))
         self.withdrawButton.setText(_translate("bankAccount", "Withdraw"))
         self.depositButton.setText(_translate("bankAccount", "Deposit"))
         self.amountLabel1.setText(_translate("bankAccount", "Amount: "))
-        self.interestLabel.setText(_translate("bankAccount", "Deposits Until Interest: 3"))
+        self.interestLabel.setText(_translate("bankAccount", "Deposits Until Interest: 5"))
         self.amountLabel2.setText(_translate("bankAccount", "Amount: "))
         self.accountLabel.setText(_translate("bankAccount", "Accounts"))
         self.transferButton.setText(_translate("bankAccount", "Transfer"))
         self.balanceLabel.setText(_translate("bankAccount", "Balance: $0.00"))
+        self.signInMessage.setText(_translate("bankAccount", ""))
+        self.depositAmt.setPlaceholderText(_translate("bankAccount", "$0.00"))
+        self.withdrawAmt.setPlaceholderText(_translate("bankAccount", "$0.00"))
+        self.transferAmt.setPlaceholderText(_translate("bankAccount", "$0.00"))
+        self.errorLabel.setText(_translate("bankAccount", ""))
