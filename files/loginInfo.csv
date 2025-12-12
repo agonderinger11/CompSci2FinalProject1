@@ -1,0 +1,5 @@
+username,password,checkingBalance,savingBalance,depositsUntilInterest
+example1,Password987#,6100.0,6141.200625,5
+example2,Password987$,4419.0,5667.5,1
+austin,Password987%,6469.0,3769.703043750001,5
+tester,testWord987#,900.0,1260.0,5
